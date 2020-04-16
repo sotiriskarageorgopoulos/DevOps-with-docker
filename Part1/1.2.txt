@@ -1,0 +1,5 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1$ sudo docker ps -a
+CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS                    PORTS               NAMES
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1$ sudo docker images
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1$ 
