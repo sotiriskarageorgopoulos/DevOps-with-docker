@@ -1,0 +1,17 @@
+sotiris@sotiris-VirtualBox:~$ sudo docker run -d --name ex_1.5_ -it ubuntu:16.04 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+5fd71caaf6e6c0ed2e2c95b96f813c060fab147a8dff194885320e2de30a0b6c
+sotiris@sotiris-VirtualBox:~$ sudo docker exec ex_1.5_ sh -c 'apt-get update && apt-get -y install curl'
+sotiris@sotiris-VirtualBox:~$ sudo docker attach ex_1.5_
+<html>
+
+<head>
+  <title>301 Moved Permanently</title>
+</head>
+
+<body>
+  <h1>Moved Permanently</h1>
+  <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body>
+
+</html>Searching..
+

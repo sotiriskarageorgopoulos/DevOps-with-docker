@@ -1,0 +1,19 @@
+sotiris@sotiris-VirtualBox:~$ sudo docker run --name clock devopsdockeruh/exec_bash_exercise
+(node:1) ExperimentalWarning: The fs.promises API is experimental
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+.
+.
+.
+sotiris@sotiris-VirtualBox:~$ sudo docker exec clock tail -f ./logs.txt
+Fri, 17 Apr 2020 11:16:20 GMT
+Fri, 17 Apr 2020 11:16:23 GMT
+Secret message is:
+"Docker is easy"
+Fri, 17 Apr 2020 11:16:29 GMT
+Fri, 17 Apr 2020 11:16:32 GMT
+Fri, 17 Apr 2020 11:16:35 GMT
+Fri, 17 Apr 2020 11:16:38 GMT
+Secret message is:
+"Docker is easy"
+
