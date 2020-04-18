@@ -1,0 +1,32 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.6$ sudo docker pull devopsdockeruh/overwrite_cmd_exercise
+[sudo] password for sotiris: 
+Using default tag: latest
+latest: Pulling from devopsdockeruh/overwrite_cmd_exercise
+092586df9206: Downloading [=================>                                 ]  16.07MB/45.38MB
+ef599477fae0: Download complete 092586df9206: Pull complete 
+ef599477fae0: Pull complete 
+4530c6472b5d: Pull complete 
+d34d61487075: Pull complete 
+87fc2710b63f: Pull complete 
+e83c771c5387: Pull complete 
+fef6195892ae: Pull complete 
+70e1a68db517: Pull complete 
+c2599bbef3cb: Pull complete 
+c5a7dd6f6ae1: Pull complete 
+446220381e79: Pull complete 
+27d5280e809c: Pull complete 
+Digest: sha256:02e38f4285d5cfaff5ed57ae67a8d99e041027da8f5c972329b46e2b7a47b7d2
+Status: Downloaded newer image for devopsdockeruh/overwrite_cmd_exercise:latest
+docker.io/devopsdockeruh/overwrite_cmd_exercise:latest
+
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.6$ sudo docker build . -t docker-clock
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM devopsdockeruh/overwrite_cmd_exercise
+ ---> 3d2b622b1849
+Step 2/2 : CMD ["-c"]
+ ---> Running in 4ec87d8c05af
+Removing intermediate container 4ec87d8c05af
+ ---> e23353b4b5c3
+Successfully built e23353b4b5c3
+Successfully tagged docker-clock:latest
+
