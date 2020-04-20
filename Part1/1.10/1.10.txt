@@ -1,0 +1,41 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.10/frontend-example-docker-master$ sudo docker build . -t project
+Sending build context to Docker daemon  586.8kB
+Step 1/11 : FROM ubuntu:19.10
+ ---> e9ccb229a23d
+Step 2/11 : WORKDIR /src
+ ---> Using cache
+ ---> 56e8aeeac013
+Step 3/11 : RUN apt-get update
+ ---> Using cache
+ ---> 98d316a93708
+Step 4/11 : RUN apt-get install -y curl
+ ---> Using cache
+ ---> 20c1f0fcfa29
+Step 5/11 : RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+ ---> Using cache
+ ---> a3c113828f88
+Step 6/11 : RUN apt install -y nodejs
+ ---> Using cache
+ ---> 8c3cd72b2d58
+Step 7/11 : COPY package*.json ./
+ ---> Using cache
+ ---> 21022ccd508c
+Step 8/11 : RUN npm install
+ ---> Using cache
+ ---> 1ab0bb4cd9b7
+Step 9/11 : COPY . .
+ ---> Using cache
+ ---> 8ea3ebbe5e14
+Step 10/11 : EXPOSE 5000
+ ---> Using cache
+ ---> c358da6c7a75
+Step 11/11 : CMD ["npm","start"]
+ ---> Using cache
+ ---> a38b870bb905
+Successfully built a38b870bb905
+Successfully tagged project:latest
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.10/frontend-example-docker-master$ sudo docker run -p 5000:5000 project
+
+> frontend-example-docker@1.0.0 start /src
+> webpack --mode production && serve -s -l 5000 dist
+

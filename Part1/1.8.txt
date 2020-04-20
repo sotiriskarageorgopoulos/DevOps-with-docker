@@ -1,0 +1,4 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1$ touch log.txt
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1$ docker -v log.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+Docker version 19.03.6, build 369ce74a3c
+
