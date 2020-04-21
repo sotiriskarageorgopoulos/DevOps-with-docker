@@ -1,0 +1,4 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.12$ sudo docker build . -t frontend_proj 
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.12$ sudo docker build . -t backend_proj 
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.12$ sudo docker run -d -p 5000:5000 frontend_proj
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.12$ sudo docker run -d -p 8000:8000 -v /server/logs.txt:/server/logs.txt backend_proj

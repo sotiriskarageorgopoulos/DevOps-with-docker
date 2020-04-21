@@ -1,0 +1,2 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.13$ sudo docker build . -t java_spring
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.13$ sudo docker run -p 4567:4567 -d java_spring
