@@ -1,0 +1,2 @@
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.14$ sudo docker build . -t rubyproject
+sotiris@sotiris-VirtualBox:~/Desktop/DevOps_course/Part1/1.14$ sudo docker -p 4200:4200 rubyproj
