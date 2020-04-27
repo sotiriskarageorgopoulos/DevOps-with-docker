@@ -1,0 +1,8 @@
+sotiris@sotiris-VirtualBox:~$ sudo docker pull devopsdockeruh/heroku-example
+sotiris@sotiris-VirtualBox:~$ sudo snap install --classic heroku
+sotiris@sotiris-VirtualBox:~$ sudo heroku login -i
+sotiris@sotiris-VirtualBox:~$ sudo heroku container:login
+sotiris@sotiris-VirtualBox:~$ sudo docker push registry.heroku.com/ex16/web
+sotiris@sotiris-VirtualBox:~$ sudo heroku container:release -a ex16 web
+
+the link is the following: https://ex16.herokuapp.com/
