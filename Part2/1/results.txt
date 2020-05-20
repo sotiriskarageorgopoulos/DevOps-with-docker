@@ -1,0 +1,13 @@
+sotiris@sotiris-Aspire-A515-51G:~/DevOps-with-docker/Part2/1$ sudo docker-compose up
+Recreating 1_save_logs_1 ... done
+Attaching to 1_save_logs_1
+save_logs_1  | (node:1) ExperimentalWarning: The fs.promises API is experimental
+save_logs_1  | Wrote to file /usr/app/logs.txt
+save_logs_1  | Wrote to file /usr/app/logs.txt
+save_logs_1  | Wrote to file /usr/app/logs.txt
+save_logs_1  | Wrote to file /usr/app/logs.txt
+save_logs_1  | Wrote to file /usr/app/logs.txt
+save_logs_1  | Wrote to file /usr/app/logs.txt
+save_logs_1  | Wrote to file /usr/app/logs.txt
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping 1_save_logs_1   ... done

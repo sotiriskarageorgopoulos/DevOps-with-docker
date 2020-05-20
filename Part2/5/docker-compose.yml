@@ -1,0 +1,16 @@
+version: '3'
+services: 
+    redis:
+        image: redis
+    backend_proj:
+        image: backend_proj
+        ports:
+          - 8000:8000
+        environment: 
+          - REDIS=redis
+          - REDIS_PORT=6379
+        restart: always
+    frontend_proj:
+        image: frontend_proj
+        ports: 
+          - 5000:5000

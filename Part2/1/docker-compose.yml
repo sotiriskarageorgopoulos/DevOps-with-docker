@@ -1,0 +1,6 @@
+version: '3'
+services:
+   save_logs:
+      image: devopsdockeruh/first_volume_exercise
+      volumes: 
+       - ./log.txt:/usr/app/logs.txt

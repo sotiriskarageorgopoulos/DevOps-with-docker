@@ -1,0 +1,31 @@
+version: '3'
+services:
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        - POSTGRES_PASSWORD=skadmksmcs
+        - POSTGRES_USER=sotiris
+      container_name: db
+      restart: always
+    redis:
+        image: redis
+    backend_proj:
+        image: backend_proj
+        ports:
+            - 8000:8000
+        environment:
+            - REDIS=redis
+            - REDIS_PORT=6379
+            - DB_USERNAME=sotiris
+            - DB_PASSWORD=skadmksmcs
+            - DB_HOST=db
+        restart: always
+        depends_on: 
+            - db
+            - redis    
+    frontend_proj:
+        image: backend_proj
+        ports: 
+           - 5000:5000
+    
