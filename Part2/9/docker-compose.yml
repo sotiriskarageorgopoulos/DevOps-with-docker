@@ -1,0 +1,32 @@
+version: '3'
+services:
+    db1:
+      image: postgres
+      environment:
+        - POSTGRES_PASSWORD=skadmks12mcs
+        - POSTGRES_USER=sotiris1
+      volumes:
+        - ./database:/var/lib/postgresql/data
+      container_name: db1
+      restart: always
+    redis:
+        image: redis
+    backend_proj:
+        image: backend_proj
+        environment:
+            - REDIS=redis
+            - REDIS_PORT=6379
+            - DB_USERNAME=sotiris1
+            - DB_PASSWORD=skadmks12mcs
+            - DB_HOST=db1
+        restart: always 
+    frontend_proj:
+        image: backend_proj
+        environment: 
+            - API_URL=/api
+    nginx:
+       image: nginx
+       ports:
+          - 80:80
+       volumes:
+          - ./nginx.conf:/etc/nginx/nginx.conf
